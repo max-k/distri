@@ -12,6 +12,11 @@ import javax.swing.JLabel;
 import java.util.*;
 import java.math.BigDecimal;
 
+/**
+ * Generic GUI for GenericDistributor
+ *
+ * @author Thomas Sarboni "max-k@post.com"
+ */
 @SuppressWarnings ("serial")
 public class GenericDistributorGui <P extends Product, M extends Money>
     extends JFrame

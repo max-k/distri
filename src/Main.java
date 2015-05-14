@@ -3,8 +3,22 @@ import java.util.*;
 import java.math.BigDecimal;
 import javax.swing.SwingUtilities;
 
-class Main {
+/**
+ * <b>Main entry point<b>
+ * <p>
+ * Here, you can instantiate a new distributor using
+ * corresponding product and money.
+ * </p>
+ * @see GenericDistributor
+ *
+ * @author Thomas Sarboni "max-k@post.com"
+ */
+class Main
+{
 
+    /**
+     * Command-line help method
+     */
     public static void usage()
     {
         System.out.println("distri : Generic distributor simulator");
@@ -15,6 +29,10 @@ class Main {
         System.exit(1);
     }
 
+    /**
+     * Main method
+     * @param args Command-line arguments
+     */
     public static void main(String args[])
     {
 

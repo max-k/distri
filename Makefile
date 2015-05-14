@@ -4,7 +4,7 @@ JCC        = javac
 JCFLAGS    = -Werror -deprecation
 
 JDOC       = javadoc
-JDOCFLAGS  = -author
+JDOCFLAGS  = -author -quiet
 
 MAIN       = Main
 JAR        = distri.jar
@@ -18,8 +18,9 @@ SRC        = $(wildcard $(SRCDIR)/*.$(EXT))
 CLASSES    = $(SRC:$(SRCDIR)/%.$(EXT)=$(CLSDIR)/%.class)
 CLSNODIR   = $(CLASSES:$(CLSDIR)/%=%)
 
-default: $(CLASSES)
-all: $(JAR)
+default:   $(CLASSES)
+jar:       $(JAR)
+all:       $(JAR) doc
 
 .PHONY: doc clean mrproper
 
@@ -28,8 +29,9 @@ help:
 	@ echo ''
 	@ echo 'Usage :'
 	@ echo 'make             Build .class files'
-	@ echo 'make all         Build .jar file'
+	@ echo 'make jar         Build .jar file'
 	@ echo 'make doc         Build documentation'
+	@ echo 'make all         Build .class and .jar files, and documentation'
 	@ echo 'make clean       Remove .class files'
 	@ echo 'make mrproper    Remove all build directories'
 
